@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<link title="David R. Hanson" href="http://www.research.microsoft.com/%7edrh" rev="made">
+		<link href="style.css" rel="stylesheet" type="text/css" media="all">
+		<title>lcc, A Retargetable Compiler for ANSI C</title>
+	</head>
+
+	<body>
+		<p><span class="banner"><a href="http://www.cs.princeton.edu">Princeton CS</a> &raquo; <a href="http://www.cs.princeton.edu/software">Software</a> &raquo; lcc, A Retargetable C Compiler</span></p>
+		<h1>lcc, A Retargetable Compiler for ANSI C</h1>
+		<table border="0">
+			<tr align="LEFT" valign="TOP">
+				<td valign="TOP" width="130" height="142"><img src="images/cover.gif" alt="Cover" height="168" width="130"></td>
+				<td rowspan="2" width="18" height="195"><img src="images/dot_clear.gif" width="18"></td>
+				<td rowspan="2" height="195"><a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc">FTP site</a> &middot; <a href="ftp://ftp.mpi-sb.mpg.de/pub/misc/mirror/ftp.cs.princeton.edu/lcc">European mirror site</a><br>
+					<a href="http://www.cs.princeton.edu/software/lcc/pkg">Source code</a><br>
+					<a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc/contrib">Contributed software</a> &middot; <a href="http://www.cs.virginia.edu/%7elcc-win32/">LCC-Win32</a> &middot; <a href="http://cs.anu.edu.au/%7ehugh.fisher/lcc/">SGI N32 backend</a><br>
+					<a href="faq.html">Frequently asked questions</a><br>
+					<a href="http://www.cs.princeton.edu/software/lcc/pkg/doc/install.html">Installation guide</a> &middot; <a href="http://www.cs.princeton.edu/software/lcc/pkg/doc/install.html#bugs">Reporting bugs</a><br>
+					Man pages: <a href="cgi-bin/man2html.cgi?lcc+1"><tt>lcc</tt></a> &middot; <a href="cgi-bin/man2html.cgi?bprint+1"><tt>bprint</tt></a><br>
+					
+					Reviews: <a href="http://compilers.iecc.com/comparch/article/95-04-170">comp.compilers</a> (follow-ups: <a href="http://compilers.iecc.com/comparch/article/98-06-049">1</a>, <a href="http://compilers.iecc.com/comparch/article/98-06-033">2</a>)<br>
+					
+					Errata: <a href="2.html">Second Printing</a> &middot; <a href="1.html">First Printing</a><br>
+					Related page: <a href="http://www.cs.princeton.edu/software/cii"><cite>C Interfaces and Implementations</cite></a></td>
+			</tr>
+			<tr align="LEFT" valign="TOP" height="27">
+				<td align="center" valign="middle" height="27">
+					<p align="center"><a href="http://www.amazon.com/exec/obidos/ASIN/0805316701/lccaretargcco-20"><b><font size="4">Buy it!</font></b></a></p>
+				</td>
+			</tr>
+		</table>
+		<blockquote>
+			<p><strong>Download release 4.2:</strong> <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc/4.2.tar.gz">gzip'd tar file</a> (624K) &middot; <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc/4.2.tar.Z">compress'd tar file</a> (1063K) &middot; <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc/lcc42.zip">ZIP archive</a> (784K).</p>
+			<p><strong>Download lcc.NET, an lcc 4.2 backend for MSIL:</strong> <a href="javascript:function openEula(url){window.open(url,'eula','width=500,height=500,resizable=yes,scrollbars=yes,address=no,menu=no');}openEula('http://research.microsoft.com/downloads/download.asp?FUID={51482347-18B0-4BD9-9715-98C298AF6EFD}');">ZIP archive</a> (141K).</p>
+		</blockquote>
+		<p>lcc is a retargetable compiler for Standard C. It generates code for the ALPHA, SPARC, MIPS R3000, and Intel x86 and its successors. lcc is available for anonymous ftp from <tt>ftp.cs.princeton.edu</tt> in <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc"><tt>/pub/packages/lcc</tt></a>; the <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc/README"><tt>README</tt></a> file gives the details. Here's what else is available:</p>
+		<ul>
+			<li>A updated, complete description of the <a href="http://www.research.microsoft.com/%7edrh/pubs/interface4.pdf">lcc 4.x Code-Generation Interface</a> (<small>PDF 256K</small>).
+			<li>The lcc 4.2 distribution <a href="http://www.cs.princeton.edu/software/lcc/pkg/LOG"><tt>LOG</tt></a> and <a href="http://www.cs.princeton.edu/software/lcc/pkg/README"><tt>README</tt></a> files.
+			<li><a href="doc/06.pdf">A sample chapter</a> from <cite>A Retargetable C Compiler</cite> (<small>PDF 339K</small>).
+			<li><a href="asdl.html">Using ASDL with lcc 4.1</a>.
+			<li><a href="http://www.cs.princeton.edu/software/lcc/cdb">cdb</a>, a machine-independent debugger.
+			<li>User-contributed software is available in <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc/contrib"><tt>/pub/packages/lcc/contrib</tt></a>; its <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc/contrib/README"><tt>README</tt></a> lists the contributions and gives instructions for contributors.
+			<li>lcc 3.6 <a href="http://www.cs.princeton.edu/software/lcc/3.6">source code</a>.
+			<li>A <a href="doc/index.html">bibliography</a> of lcc-related papers and talks.
+		</ul>
+		<p><a name="book">lcc</a> is described in <cite>A Retargetable C Compiler: Design and Implementation</cite> (<a href="http://www.aw-bc.com/catalog/academic/product/0,1144,0805316701,00.html">Addison-Wesley</a>, 1995, ISBN 0-8053-1670-1). This book is a detailed tour of the lcc 3.6 source code. The <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc">ftp distribution</a> includes the source code for the complete compiler, the code generators for all its targets, and the code-generator generator that produced them. See the <a href="preface.html">preface</a> and <a href="toc.html">table of contents</a> for more details.</p>
+		<p>The USENET newsgroup <a href="news:comp.compilers.lcc">comp.compilers.lcc</a> is an unmoderated newsgroup that serves as a forum for all topics related to the installation, use, and development of lcc. You can post messages to comp.compilers.lcc using any USENET newsreader or by visiting <a href="http://www.dejanews.com/">http://www.dejanews.com/</a>, which also includes an archive of recent postings.</p>
+		<hr>
+		<address><a href="http://www.research.microsoft.com/%7ecwfraser">Chris Fraser</a><br>
+			<a href="http://www.research.microsoft.com/%7edrh">David Hanson</a><br>
+			$Revision: 1.66 $ $Date$</address>
+	</body>
+
+</html>
