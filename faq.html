@@ -12,13 +12,23 @@
 	<body>
 		<p><span class="banner"><a href="http://www.cs.princeton.edu">Princeton CS</a> &raquo; <a href="http://www.cs.princeton.edu/software">Software</a> &raquo; <a href="http://www.cs.princeton.edu/software/lcc/">lcc, A Retargetable C Compiler</a> &raquo; Frequently Asked Questions</span></p>
 		<h1>Frequently Asked Questions about lcc</h1>
+		<p>Q. <a name="cvs"></a>Is the lcc source tree available via anonymous CVS?<br>
+			A. Yes; the lcc 4.1 source code was stripped out of the lcc book files and checked into a CVS repository. Modifications since then have been made via CVS. The respository is hosted at cvs.cs.princeton.edu. The command</p>
+		<blockquote>
+			<code>cvs -d :ext:anon-lcc@cvs.cs.princeton.edu:/cvs co -d lcc .</code></blockquote>
+		<p>creates the directory <code>lcc</code> and populates it from the source tree. This command is equivalent to the commands</p>
+		<blockquote>
+			<code>mkdir lcc<br>
+				cd lcc<br>
+				cvs -d :ext:anon-lcc@cvs.cs.princeton.edu:/cvs co .</code></blockquote>
+		<p>Hit return if you're prompted for a password, and ignore diagnostics about missing home directories. Visit <a href="http://cvs.cs.princeton.edu">http://cvs.cs.princeton.edu</a> for more information about the Princeton CVS server.</p>
 		<p>Q. What backends come with lcc?<br>
-			A. The distribution on <tt>ftp.cs.princeton.edu</tt> in <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc"><tt>/pub/packages/lcc</tt></a> includes code generators for the ALPHA (DEC OSF/1), SPARC (Solaris), MIPS R3000 (SGI Irix), and X86 (Windows 95/98/NT and Linux). Backends for some other targets are available in <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc/contrib"><tt>/pub/packages/lcc/contrib</tt></a>, which holds user-contributed software and documentation.</p>
+				A. The distribution on <tt>ftp.cs.princeton.edu</tt> in <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc"><tt>/pub/packages/lcc</tt></a> includes code generators for the ALPHA (DEC OSF/1), SPARC (Solaris), MIPS R3000 (SGI Irix), and X86 (Windows 95/98/NT and Linux). Backends for some other targets are available in <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc/contrib"><tt>/pub/packages/lcc/contrib</tt></a>, which holds user-contributed software and documentation.</p>
 		<p>Q. What happened to the SunOS (SPARC) and DEC Ultrix (MIPS) backends for lcc 4.1?<br>
 			A. These backends are still supported and are included in the distribution, but the test baselines (sparc/sun/tst and mips/ultrix/tst) and the driver support files (etc/sun.c and etc/ultrix.c) are not included in the 4.1 distribution, because we no longer have access to these systems. You can use the 4.0 driver support files with 4.1.</p>
 		<p>Q. Is there a version of the X86 backend for Linux?<br>
 			A. Yes; version 4.1 of lcc supports the X86 running Linux; it's been tested on both RedHat 5.1 and Slackware 3.4. Be warned: lcc version 4.1 uses a different, but similar <a href="http://drh.home.dyndns.org/pubs/interface4.pdf">code generation interface</a> (<small>PDF 256K</small>) than the one described in the book and used in lcc version 3.x.</p>
-		<p>Q. Does lcc support the <code>long</code> <a name="Anchor-long-49575" id="Anchor-long-49575"></a><a name="Anchor-long-47857" id="Anchor-long-47857"></a><code>long</code> type?<br>
+		<p>Q. Does lcc support the <code>long</code> <a name="long-long"></a><code>long</code> type?<br>
 			A. Yes, lcc 4.1 supports <code>long</code> <code>long</code>, but all of its backends currently use the same representation for <code>long</code> and <code>long</code> <code>long</code>, i.e., 32 bits on 32-bit targets and 64 bits on 64-bit targets.</p>
 		<p>Q. What about licensing lcc or parts of it for commercial use?<br>
 			A. See the <a href="http://www.cs.princeton.edu/software/lcc/pkg/CPYRIGHT">copyright notice</a>. Per-copy and unlimited use licenses are available; for more information, contact</p>
