@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+
+<head>
+<link HREF="mailto:drh@microsoft.com" REV="made" TITLE="David R. Hanson">
+<title>lcc, A Retargetable Compiler for ANSI C</title>
+</head>
+
+<body>
+
+<table border="1" width="100%" style="background-color: rgb(255,255,0); font-family: Verdana, sans-serif; font-size: smaller" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="100%"><a href="/" title="Princeton CS Home Page">Princeton CS</a> <img src="images/arrow.gif" alt=":" WIDTH="13" HEIGHT="9"> <a href="/software" title="Princeton CS Software">Software</a>
+    <img src="images/arrow.gif" alt=":" WIDTH="13" HEIGHT="9"> lcc, A Retargetable C Compiler</td>
+  </tr>
+</table>
+
+<h1>lcc, A Retargetable Compiler for ANSI C</h1>
+
+<table BORDER="0">
+  <tr ALIGN="LEFT" VALIGN="TOP">
+    <td VALIGN="MIDDLE"><img SRC="images/cover.gif" ALT="Cover" WIDTH="130" HEIGHT="168"><img SRC="images/dot_clear.gif" WIDTH="24"></td>
+    <td><a HREF="ftp://ftp.cs.princeton.edu/pub/packages/lcc">FTP site</a> · <a HREF="ftp://ftp.mpi-sb.mpg.de/pub/misc/mirror/ftp.cs.princeton.edu/lcc">European mirror
+    site</a><br>
+    <a HREF="pkg">Source code</a> · <a HREF="cgi-bin/changed.cgi">Files updated since the 4.1
+    release</a><br>
+    <a HREF="ftp://ftp.cs.princeton.edu/pub/packages/lcc/contrib/">Contributed software</a> ·
+    <a HREF="http://www.cs.virginia.edu/~lcc-win32/">LCC-Win32</a><br>
+    <a HREF="faq.html">Frequently asked questions</a><br>
+    <a HREF="pkg/doc/install.html">Installation guide</a> · <a HREF="pkg/doc/install.html#bugs">Reporting bugs</a><br>
+    Man pages: <a HREF="cgi-bin/man2html.cgi?lcc+1"><tt>lcc</tt></a> <a HREF="pkg/doc/lcc.1.pdf"><img SRC="images/pdficonsmall.gif" ALIGN="MIDDLE" WIDTH="22" HEIGHT="24"></a> · <a HREF="cgi-bin/man2html.cgi?bprint+1"><tt>bprint</tt></a> <a HREF="pkg/doc/bprint.1.pdf"><img SRC="images/pdficonsmall.gif" ALIGN="MIDDLE" WIDTH="22" HEIGHT="24"></a><br>
+    Where to order the book: <a HREF="http://www.awl.com/cseng/titles/0-8053-1670-1/">Addison-Wesley</a>,
+    <a HREF="http://www.cbooks.com/sqlnut/SP/search/gtsumt?isbn=0805316701">Computer Literacy
+    Bookshops</a>, <a HREF="http://www.amazon.com/exec/obidos/ISBN=0805316701/1279-9625484-642556">Amazon Books</a>,
+    <a HREF="http://www.a1books.com/cgi-bin/a1books/front.cgi?act=showDesc&amp;ISBN=0805316701">A1
+    Books</a>, <a HREF="http://www.bookpool.com/.x/kdpdwt/ss/1?qs=Hanson&amp;qt=a">Book Pool</a><br>
+    Errata: <a HREF="2.html">Second Printing</a> · <a HREF="1.html">First Printing</a><br>
+    Related page: <a HREF="http://www.cs.princeton.edu/software/cii/"><cite>C Interfaces and
+    Implementations</cite></a></td>
+    <td valign="top" align="center"><a href="http://www.links2go.com/topic/Compilers"><img alt="Key Resource" src="images/links2go.gif" border="0" WIDTH="81" HEIGHT="81"><br>
+    <small><b><i>Links<sup><small>2</small></sup>Go</i></b><br>
+    Compilers</small></a></td>
+  </tr>
+</table>
+
+<blockquote>
+  <p><img src="images/new.gif" alt="NEW!" WIDTH="31" HEIGHT="12"><strong>Release 4.1 is now available:</strong> <a HREF="ftp://ftp.cs.princeton.edu/pub/packages/lcc/4.1.tar.gz">gzip'd tar file</a> (649K)
+  · <a HREF="ftp://ftp.cs.princeton.edu/pub/packages/lcc/4.1.tar.Z">compress'd tar file</a>
+  (1111K) · <a HREF="ftp://ftp.cs.princeton.edu/pub/packages/lcc/lcc41.zip">ZIP archive</a>
+  (748K).</p>
+  <p><img src="images/new.gif" alt="NEW!" WIDTH="31" HEIGHT="12"><strong>Also available:</strong> An <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc/lcc41.exe">InstallShield executable</a>
+  (1099K) that installs the lcc 4.1 binaries under Windows NT/95/98.</p>
+</blockquote>
+
+<p>lcc is a retargetable compiler for ISO Standard C. It generates code for the ALPHA,
+SPARC, MIPS R3000, and Intel x86 and its successors. lcc is available for anonymous ftp
+from <tt>ftp.cs.princeton.edu</tt> in <a HREF="ftp://ftp.cs.princeton.edu/pub/packages/lcc"><tt>/pub/packages/lcc</tt></a>; the <a HREF="ftp://ftp.cs.princeton.edu/pub/packages/lcc/README"><tt>README</tt></a> file gives
+the details. Here's what else is available: 
+
+<ul>
+  <li><img src="images/new.gif" alt="NEW!" WIDTH="31" HEIGHT="12"><a href="asdl.html">Using ASDL with lcc 4.1</a>.</li>
+  <li><a href="cdb/">cdb</a>, a machine-independent debugger.</li>
+  <li>A description of the <a HREF="pkg/doc/4.html">lcc 4.1 Code-Generation Interface</a>.</li>
+  <li>The lcc 4.1 distribution <a HREF="pkg/LOG"><tt>LOG</tt></a> and <a HREF="pkg/README"><tt>README</tt></a>
+    files.</li>
+  <li><a HREF="doc/06.pdf">A sample chapter</a> from <cite>A Retargetable C Compiler</cite> ( <img SRC="images/pdficonsmall.gif" ALT="PDF" ALIGN="MIDDLE" WIDTH="22" HEIGHT="24"> ~367K).</li>
+  <li>User-contributed software is available in <a HREF="ftp://ftp.cs.princeton.edu/pub/packages/lcc/contrib"><tt>/pub/packages/lcc/contrib</tt></a>;
+    its <a HREF="ftp://ftp.cs.princeton.edu/pub/packages/lcc/contrib/README"><tt>README</tt></a>
+    lists the contributions and gives instructions for contributors.</li>
+  <li>lcc 3.6 <a HREF="3.6">source code</a>.</li>
+  <li>Additional <a HREF="doc/">documentation</a> about lcc and a <a HREF="doc/">bibliography</a>
+    of lcc-related papers and talks.</li>
+</ul>
+
+<p><a NAME="book">lcc</a> is described in <cite>A Retargetable C Compiler: Design and
+Implementation</cite> (Addison-Wesley, 1995, ISBN 0-8053-1670-1). This book is a detailed
+tour of the lcc 3.6 source code. The <a HREF="ftp://ftp.cs.princeton.edu/pub/packages/lcc">ftp
+distribution</a> includes the source code for the complete compiler, the code generators
+for all its targets, and the code-generator generator that produced them. See the <a HREF="preface.html">preface</a> and <a HREF="toc.html">table of contents</a> for more
+details. For an unbiased opinion, see the <a HREF="review.txt">4/28/95 review</a> posted
+to <a HREF="news:comp.compilers">comp.compilers</a>.</p>
+
+<p>There is an lcc mailing list for general information about lcc. To be added to the
+list, send a message with the 1-line body</p>
+
+<blockquote>
+  <pre>subscribe lcc</pre>
+</blockquote>
+
+<p>to <var><a HREF="mailto:majordomo@cs.princeton.edu">majordomo@cs.princeton.edu</a></var>.
+This line must appear in the message body; &quot;Subject:&quot; lines are ignored. To
+learn more about mailing lists served by majordomo, send a message with the body &quot;<tt>help</tt>&quot;
+to <var>majordomo@cs.princeton.edu</var>.</p>
+
+<p>Mail sent to <var><a HREF="mailto:lcc@cs.princeton.edu">lcc@cs.princeton.edu</a></var>
+to is forwarded to everyone on the mailing list. There is also an <tt>lcc-bugs</tt>
+mailing list for reporting bugs; mail addressed to <var><a HREF="mailto:lcc-bugs@cs.princeton.edu">lcc-bugs@cs.princeton.edu</a></var> is forwarded
+to everyone on this list.</p>
+
+<hr>
+
+<address>
+  <a HREF="http://www.research.microsoft.com/~cwfraser/">Chris Fraser</a> / <a HREF="mailto:cwfraser@microsoft.com">cwfraser@microsoft.com</a><br>
+  <a HREF="http://www.research.microsoft.com/~drh/">David Hanson</a> / <a HREF="mailto:drh@microsoft.com">drh@microsoft.com</a><br>
+  $Revision: 1.43 $ $Date: 1998/09/21 23:37:48 $ 
+</address>
+</body>
+</html>
