@@ -6,51 +6,120 @@
 		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
 		<link title="David R. Hanson" href="http://www.research.microsoft.com/%7edrh" rev="made">
 		<link href="style.css" rel="stylesheet" type="text/css" media="all">
+		<style type="text/css" media="screen"><!--
+.display   { margin-top: 12px; margin-bottom: 12px }
+--></style>
 		<title>lcc, A Retargetable Compiler for ANSI C</title>
 	</head>
 
 	<body>
 		<p><span class="banner"><a href="http://www.cs.princeton.edu">Princeton CS</a> &raquo; <a href="http://www.cs.princeton.edu/software">Software</a> &raquo; lcc, A Retargetable C Compiler</span></p>
 		<h1>lcc, A Retargetable Compiler for ANSI C</h1>
-		<table border="0">
-			<tr align="LEFT" valign="TOP">
-				<td valign="TOP" width="130" height="142"><img src="images/cover.gif" alt="Cover" height="168" width="130"></td>
-				<td rowspan="2" width="18" height="195"><img src="images/dot_clear.gif" width="18"></td>
-				<td rowspan="2" height="195"><a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc">FTP site</a> &middot; <a href="ftp://ftp.mpi-sb.mpg.de/pub/misc/mirror/ftp.cs.princeton.edu/lcc">European mirror site</a><br>
-					<a href="http://www.cs.princeton.edu/software/lcc/pkg">Source code</a><br>
-					<a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc/contrib">Contributed software</a> &middot; <a href="http://www.cs.virginia.edu/%7elcc-win32/">LCC-Win32</a> &middot; <a href="http://cs.anu.edu.au/%7ehugh.fisher/lcc/">SGI N32 backend</a><br>
-					<a href="faq.html">Frequently asked questions</a><br>
-					<a href="http://www.cs.princeton.edu/software/lcc/pkg/doc/install.html">Installation guide</a> &middot; <a href="http://www.cs.princeton.edu/software/lcc/pkg/doc/install.html#bugs">Reporting bugs</a><br>
-					Man pages: <a href="cgi-bin/man2html.cgi?lcc+1"><tt>lcc</tt></a> &middot; <a href="cgi-bin/man2html.cgi?bprint+1"><tt>bprint</tt></a><br>
-					
-					Reviews: <a href="http://compilers.iecc.com/comparch/article/95-04-170">comp.compilers</a> (follow-ups: <a href="http://compilers.iecc.com/comparch/article/98-06-049">1</a>, <a href="http://compilers.iecc.com/comparch/article/98-06-033">2</a>)<br>
-					
-					Errata: <a href="2.html">Second Printing</a> &middot; <a href="1.html">First Printing</a><br>
-					Related page: <a href="http://www.cs.princeton.edu/software/cii"><cite>C Interfaces and Implementations</cite></a></td>
-			</tr>
-			<tr align="LEFT" valign="TOP" height="27">
-				<td align="center" valign="middle" height="27">
-					<p align="center"><a href="http://www.amazon.com/exec/obidos/ASIN/0805316701/lccaretargcco-20"><b><font size="4">Buy it!</font></b></a></p>
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td align="center" valign="top" width="130">
+						<img src="images/cover.gif" alt="" height="168" width="130" border="0"><br>
+						<script language="JavaScript" type="text/javascript">
+function popUp(URL,NAME) {
+amznwin=window.open(URL,NAME,"location=yes,scrollbars=yes,status=yes,toolbar=yes,resizable=yes,width=380,height=450,screenX=10,screenY=10,top=10,left=10");
+amznwin.focus();}
+document.open();
+document.write("<a href=javascript:popUp(\"http://buybox.amazon.com/exec/obidos/redirect?tag=lccaretargcco-20&link_code=qcb&creative=23424&camp=2025&path=/dt/assoc/tg/aa/xml/assoc/-/0805316701/lccaretargcco-20/ref%3Dac_bb6_\",\"_amazon\")><img src=http://rcm-images.amazon.com/images/G/01/associates/remote-buy-box/buy6.gif border=0 alt='Buy from Amazon.com' ></a>");
+document.close();
+</script>
+<noscript>
+<form method="POST" action="http://buybox.amazon.com/o/dt/assoc/handle-buy-box=0805316701">
+<input type="hidden" name="asin.0805316701" value="1">
+<input type="hidden" name="tag-value" value="lccaretargcco-20">
+<input type="hidden" name="tag_value" value="lccaretargcco-20">
+<input type="image" name="submit.add-to-cart3" value="Buy from Amazon.com" border="0" alt="Buy from Amazon.com" src="http://rcm-images.amazon.com/images/G/01/associates/add-to-cart.gif">
+</form>
+</noscript>
+				</td>
+				<td width="18"><img src="images/dot.clear.gif" height="1" width="18"></td>
+				<td align="left" valign="top" width="35%">
+					<div align="left">
+						<p><a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc">FTP site</a> &middot; <a href="ftp://ftp.mpi-sb.mpg.de/pub/misc/mirror/ftp.cs.princeton.edu/lcc">European mirror site</a><br>
+							<a href="http://www.cs.princeton.edu/software/lcc/pkg">Source code</a><br>
+							<a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc/contrib">Contributed software</a> &middot; <a href="http://www.cs.virginia.edu/%7elcc-win32/">LCC-Win32</a> &middot; <a href="http://cs.anu.edu.au/%7ehugh.fisher/lcc/">SGI N32 backend</a><br>
+							<a href="faq.html">Frequently asked questions</a><br>
+							<a href="http://www.cs.princeton.edu/software/lcc/pkg/doc/install.html">Installation guide</a> &middot; <a href="http://www.cs.princeton.edu/software/lcc/pkg/doc/install.html#bugs">Reporting bugs</a><br>
+								Man pages: <a href="cgi-bin/man2html.cgi?lcc+1"><tt>lcc</tt></a> &middot; <a href="cgi-bin/man2html.cgi?bprint+1"><tt>bprint</tt></a><br>
+								Reviews: <a href="http://compilers.iecc.com/comparch/article/95-04-170">comp.compilers</a> (follow-ups: <a href="http://compilers.iecc.com/comparch/article/98-06-049">1</a>, <a href="http://compilers.iecc.com/comparch/article/98-06-033">2</a>)<br>
+								Errata: <a href="2.html">Second Printing</a> &middot; <a href="1.html">First Printing</a><br>
+								Related page: <a href="http://www.cs.princeton.edu/software/cii"><cite>C Interfaces and Implementations</cite></a></p>
+					</div>
+				</td>
+				<td align="left" valign="top" width="35%">
+					<div align="left">
+					Recommended compiler books:<br>
+						<A HREF="http://www.amazon.com/gp/associates/link-types/marketplace.html?t=lccaretargcco-20&asin=0201100886">Compilers: 
+Principles, Techniques, and Tools</A><br>
+<A HREF="http://www.amazon.com/gp/associates/link-types/marketplace.html?t=lccaretargcco-20&asin=155860698X">Engineering a Compiler</A><br>
+<A HREF="http://www.amazon.com/gp/associates/link-types/marketplace.html?t=lccaretargcco-20&asin=0521607655">Modern Compiler Implementation in C</A><br>
+						<A HREF="http://www.amazon.com/gp/associates/link-types/marketplace.html?t=lccaretargcco-20&asin=155558179X">Building an Optimizing Compiler</a><br>
+							<A HREF="http://www.amazon.com/gp/associates/link-types/marketplace.html?t=lccaretargcco-20&asin=1558602860">Optimizing Compilers for Modern Architectures</A><br>
+							<A HREF="http://www.amazon.com/gp/associates/link-types/marketplace.html?t=lccaretargcco-20&asin=1558603204">Advanced Compiler Design and Implementation</A></div>
+				</td>
+				<td width="18"><img src="images/dot.clear.gif" height="1" width="18"></td>
+				<td valign="top" width="120" rowspan="3">
+								<script type="text/javascript"><!--
+google_ad_client = "pub-7923738191115269";
+google_ad_width = 120;
+google_ad_height = 600;
+google_ad_format = "120x600_as";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
 				</td>
 			</tr>
+			<tr>
+				<td colspan="4" valign="middle">
+					<blockquote class="display">
+						<p><b>Download release 4.2:</b> <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc/4.2.tar.gz">gzip'd tar file</a> (624K) &middot; <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc/4.2.tar.Z">compress'd tar file</a> (1063K) &middot; <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc/lcc42.zip">ZIP archive</a> (784K).</p>
+						<p><b>Download lcc.NET, an lcc 4.2 backend for MSIL:</b> <a href="javascript:function openEula(url){window.open(url,'eula','width=500,height=500,resizable=yes,scrollbars=yes,address=no,menu=no');}openEula('http://research.microsoft.com/downloads/download.asp">ZIP archive</a> (141K).</p>
+					</blockquote>
+				</td>
+				<td width="18"></td>
+			</tr>
+			<tr>
+				<td colspan="4" align="left" valign="top">
+					<p>lcc is a retargetable compiler for Standard C. It generates code for the ALPHA, SPARC, MIPS R3000, and Intel x86 and its successors. lcc is available for anonymous ftp from <tt>ftp.cs.princeton.edu</tt> in <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc"><tt>/pub/packages/lcc</tt></a>; the <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc/README"><tt>README</tt></a> file gives the details. Here's what else is available:</p>
+					<ul>
+						<li>A updated, complete description of the <a href="http://www.research.microsoft.com/%7edrh/pubs/interface4.pdf">lcc 4.x Code-Generation Interface</a> (<small>PDF 256K</small>).
+						
+						
+						<li>The lcc 4.2 distribution <a href="http://www.cs.princeton.edu/software/lcc/pkg/LOG"><tt>LOG</tt></a> and <a href="http://www.cs.princeton.edu/software/lcc/pkg/README"><tt>README</tt></a> files.
+						
+						
+						<li><a href="doc/06.pdf">A sample chapter</a> from <cite>A Retargetable C Compiler</cite> (<small>PDF 339K</small>).
+						
+						
+						<li><a href="asdl.html">Using ASDL with lcc 4.1</a>.
+						
+						
+						<li><a href="http://www.cs.princeton.edu/software/lcc/cdb">cdb</a>, a machine-independent debugger.
+						
+						
+						<li>User-contributed software is available in <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc/contrib"><tt>/pub/packages/lcc/contrib</tt></a>; its <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc/contrib/README"><tt>README</tt></a> lists the contributions and gives instructions for contributors.
+						
+						
+						<li>lcc 3.6 <a href="http://www.cs.princeton.edu/software/lcc/3.6">source code</a>.
+						
+						
+						<li>A <a href="doc/index.html">bibliography</a> of lcc-related papers and talks.
+					
+					
+					</ul>
+					<p><a name="book">lcc</a> is described in <cite>A Retargetable C Compiler: Design and Implementation</cite> (<a href="http://www.aw-bc.com/catalog/academic/product/0,1144,0805316701,00.html">Addison-Wesley</a>, 1995, ISBN 0-8053-1670-1). This book is a detailed tour of the lcc 3.6 source code. The <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc">ftp distribution</a> includes the source code for the complete compiler, the code generators for all its targets, and the code-generator generator that produced them. See the <a href="preface.html">preface</a> and <a href="toc.html">table of contents</a> for more details.</p>
+					<p>The USENET newsgroup <a href="news:comp.compilers.lcc">comp.compilers.lcc</a> is an unmoderated newsgroup that serves as a forum for all topics related to the installation, use, and development of lcc. You can post messages to comp.compilers.lcc using any USENET newsreader or by visiting <a href="http://groups.google.com">http://groups.google.com</a>, which also includes an archive of recent postings.</p>
+				</td>
+				<td width="18"></td>
+			</tr>
 		</table>
-		<blockquote>
-			<p><strong>Download release 4.2:</strong> <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc/4.2.tar.gz">gzip'd tar file</a> (624K) &middot; <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc/4.2.tar.Z">compress'd tar file</a> (1063K) &middot; <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc/lcc42.zip">ZIP archive</a> (784K).</p>
-			<p><strong>Download lcc.NET, an lcc 4.2 backend for MSIL:</strong> <a href="javascript:function openEula(url){window.open(url,'eula','width=500,height=500,resizable=yes,scrollbars=yes,address=no,menu=no');}openEula('http://research.microsoft.com/downloads/download.asp?FUID={51482347-18B0-4BD9-9715-98C298AF6EFD}');">ZIP archive</a> (141K).</p>
-		</blockquote>
-		<p>lcc is a retargetable compiler for Standard C. It generates code for the ALPHA, SPARC, MIPS R3000, and Intel x86 and its successors. lcc is available for anonymous ftp from <tt>ftp.cs.princeton.edu</tt> in <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc"><tt>/pub/packages/lcc</tt></a>; the <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc/README"><tt>README</tt></a> file gives the details. Here's what else is available:</p>
-		<ul>
-			<li>A updated, complete description of the <a href="http://www.research.microsoft.com/%7edrh/pubs/interface4.pdf">lcc 4.x Code-Generation Interface</a> (<small>PDF 256K</small>).
-			<li>The lcc 4.2 distribution <a href="http://www.cs.princeton.edu/software/lcc/pkg/LOG"><tt>LOG</tt></a> and <a href="http://www.cs.princeton.edu/software/lcc/pkg/README"><tt>README</tt></a> files.
-			<li><a href="doc/06.pdf">A sample chapter</a> from <cite>A Retargetable C Compiler</cite> (<small>PDF 339K</small>).
-			<li><a href="asdl.html">Using ASDL with lcc 4.1</a>.
-			<li><a href="http://www.cs.princeton.edu/software/lcc/cdb">cdb</a>, a machine-independent debugger.
-			<li>User-contributed software is available in <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc/contrib"><tt>/pub/packages/lcc/contrib</tt></a>; its <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc/contrib/README"><tt>README</tt></a> lists the contributions and gives instructions for contributors.
-			<li>lcc 3.6 <a href="http://www.cs.princeton.edu/software/lcc/3.6">source code</a>.
-			<li>A <a href="doc/index.html">bibliography</a> of lcc-related papers and talks.
-		</ul>
-		<p><a name="book">lcc</a> is described in <cite>A Retargetable C Compiler: Design and Implementation</cite> (<a href="http://www.aw-bc.com/catalog/academic/product/0,1144,0805316701,00.html">Addison-Wesley</a>, 1995, ISBN 0-8053-1670-1). This book is a detailed tour of the lcc 3.6 source code. The <a href="ftp://ftp.cs.princeton.edu/pub/packages/lcc">ftp distribution</a> includes the source code for the complete compiler, the code generators for all its targets, and the code-generator generator that produced them. See the <a href="preface.html">preface</a> and <a href="toc.html">table of contents</a> for more details.</p>
-		<p>The USENET newsgroup <a href="news:comp.compilers.lcc">comp.compilers.lcc</a> is an unmoderated newsgroup that serves as a forum for all topics related to the installation, use, and development of lcc. You can post messages to comp.compilers.lcc using any USENET newsreader or by visiting <a href="http://www.dejanews.com/">http://www.dejanews.com/</a>, which also includes an archive of recent postings.</p>
 		<hr>
 		<address><a href="http://www.research.microsoft.com/%7ecwfraser">Chris Fraser</a><br>
 			<a href="http://www.research.microsoft.com/%7edrh">David Hanson</a><br>
@@ -58,3 +127,4 @@
 	</body>
 
 </html>
+
