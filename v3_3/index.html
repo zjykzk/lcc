@@ -1,0 +1,119 @@
+<HEADER>
+<TITLE>lcc, A Retargetable Compiler for ANSI C</title></HEADER>
+<BODY>
+<H1>lcc, a Retargetable Compiler for ANSI C</H1>
+
+<tt>lcc</tt> is a retargetable compiler for C as defined by the ANSI Standard
+X3.159-1989. It generates code for the SPARC, MIPS R3000, and Intel 386 and
+its successors.
+<tt>lcc</tt> is in production use at
+<a href="/">Princeton University</a> and
+<a href="http://www.research.att.com">AT&T Bell Laboratories</a>.
+The <a href="lcc.1.html">man page</a> gives usage details.<p>
+
+<tt>lcc</tt> is available for anonymous ftp
+from <tt>ftp.cs.princeton.edu</tt> in
+<a href="file://ftp.cs.princeton.edu/pub/lcc"><tt>pub/lcc</tt></a>;
+the <a href="file://ftp.cs.princeton.edu/pub/lcc/README"><tt>README</tt></a>
+file gives the details.
+Here's what else is available:
+<ul>
+<li><a href="file://ftp.cs.princeton.edu/pub/lcc/3.3.tar.gz"><tt>lcc</tt> version 3.3</a>
+is now available; it fixes all of the errors
+listed in the <a href="errata.html">errata</a> for the first
+printing of the book;
+For details see the
+<a href="file://ftp.cs.princeton.edu/pub/lcc/LOG"><tt>LOG</tt></a> file.
+Version 3.4 is imminent: it adds support for dynamic linking on the MIPS
+and fixes a nasty bug in 3.3's generated code for switch statements.
+
+<li>A list of <a href="faq.html">frequently asked questions</a>.
+
+<li>The <a href="install.html">installation guide</a> describes
+the steps necessary to install <tt>lcc</tt>.
+
+<li><a href="install.html#bugs">How to report bugs</a>;
+see the <a href="faq.html">frequently asked questions</a> before reporting bugs.
+
+<li>The <a href="lcc">source code</a> for the current version.
+
+<li>User-contributed software is available in
+<a href="file://ftp.cs.princeton.edu/pub/lcc/contrib"><tt>pub/lcc/contrib</tt></a>;
+its <a href="file://ftp.cs.princeton.edu/pub/lcc/contrib/README"><tt>README</tt></a>
+lists the contributions and gives instructions for contributors.
+
+<li>Additional <a href="doc/">documentation</a> about
+<tt>lcc</tt> and a <a href="doc/">bibliography</a> of <tt>lcc</tt>-related papers.
+</ul>
+
+<a name="book">
+<tt>lcc</tt> is described in the book,
+<cite>A Retargetable C Compiler: Design and Implementation</cite>
+(Benjamin/Cummings, 1995, ISBN 0-8053-1670-1).
+This book is a detailed tour of <tt>lcc</tt>'s source code.
+The <tt>ftp</tt> distribution in
+<a href="file://ftp.cs.princeton.edu/pub/lcc"><tt>pub/lcc</tt></a>
+and the companion diskette both hold the source code
+for the complete compiler, including the code generators
+for the SPARC, MIPS R3000 and Intel 386, and the code-generator
+generator that produced them. See
+the <a href="preface.html">preface</a> and
+<a href="toc.html">table of contents</a> for more details,
+and for an unbiased opinion,
+see the <a href="review.txt">4/28/95 review</a> posted to
+<a href="news:comp.compilers">comp.compilers</a>.
+An ASCII version of the book's index is also available on
+<tt>ftp.cs.princeton.edu</tt> in
+<a href="file://ftp.cs.princeton.edu/pub/lcc/contrib/bookidx.txt"><tt>pub/lcc/contrib/bookidx.txt</tt></a>;
+download this file to search the index online.<p>
+
+Single copies of the book may be ordered directly
+from the Addison Wesley Order Dept. at 800-447-2226
+(Addison Wesley owns Benjamin/Cummings).
+The publisher's list price is $60.25;
+bookstores usually charge less.
+For those outside the US, here's where to order copies:
+<dl>
+<dd>Canada: 416-447-5101; FAX 416-443-0948
+<dd>UK: Benjamin/Cummings +44 1734 794 000;
+Blackwells (Oxford) +44 1865 792 792
+<dd>Europe: +31 206 717296; FAX +31 206 645334
+</dl>
+<p></a>
+
+The <a href="errata.html">errata</a> lists errors in the first
+and second printings.<p>
+
+There is an <tt>lcc</tt> mailing list for general information about <tt>lcc</tt>.
+To be added to the list, send a message with the 1-line body
+<pre>subscribe lcc
+</pre>
+to <var><a href="mailto:majordomo@cs.princeton.edu">majordomo@cs.princeton.edu</a></var>.
+This line must appear
+in the message body; `Subject:' lines are ignored.
+To learn more about mailing lists served by majordomo,
+send a message with the body `<tt>help</tt>'
+to <var>majordomo@cs.princeton.edu</var>.<p>
+
+Mail sent to <var><a href="mailto:lcc@cs.princeton.edu">lcc@cs.princeton.edu</a></var>
+to is forwarded to everyone on the mailing list.
+There is also an <tt>lcc-bugs</tt> mailing list for
+reporting bugs; mail addressed to
+<var><a href="mailto:lcc-bugs@cs.princeton.edu">lcc-bugs@cs.princeton.edu</a></var>
+is forwarded to everyone on
+this list.<p>
+
+<hr>
+
+<address>
+<a href="file://netlib.att.com/netlib/att/cs/home/cwfraser.html">Chris Fraser</a> /
+<a href="mailto:cwf@research.att.com">cwf@research.att.com</a>
+</address>
+<address>
+<a href="/~drh">David Hanson</a> /
+<a href="mailto:drh@cs.princeton.edu">drh@cs.princeton.edu</a>
+</address>
+<address>
+$Revision: 1.2 $ $Date: 1995/07/25 21:31:23 $
+</address>
+</BODY>
