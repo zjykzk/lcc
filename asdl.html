@@ -13,15 +13,15 @@
 	<body>
 		<p><span class="banner"><a href="http://www.cs.princeton.edu">Princeton CS</a> &raquo; <a href="http://www.cs.princeton.edu/software">Software</a> &raquo; <a href="http://www.cs.princeton.edu/software/lcc/">lcc, A Retargetable C Compiler</a> &raquo; Using ASDL with lcc 4.1</span></p>
 		<h1>Using ASDL with lcc 4.1</h1>
-		<p>The lcc 4.1 distribution includes the files necessary to emit <a href="http://www.cs.princeton.edu/zephyr/ASDL/">ASDL</a>, as described in:</p>
+		<p>The lcc 4.1 distribution includes the files necessary to emit <a href="http://www.cs.virginia.edu/zephyr/asdl.html">ASDL</a>, as described in:</p>
 		<blockquote>
-			<p>D. R. Hanson, Early Experience with ASDL in lcc, <cite>Software&#151;Practice and Experience </cite><b>29</b> (5), 417-435, 4/25/99. <a href="http://drh.home.dyndns.org/pubs/asdl.pdf"><font size="-1">PDF</font></a> (120 KB).<br>
+			<p>D. R. Hanson, Early Experience with ASDL in lcc, <cite>Software&#151;Practice and Experience </cite><b>29</b> (5), 417-435, 4/25/99. <a href="http://storage.webhop.net/documents/asdl.pdf"><font size="-1">PDF</font></a> (120 KB).<br>
 				Slides of the talk at the National Compiler Infrastructure Tutorial, <cite>PLDI'98</cite>, 6/19/98. <a href="doc/nci@pldi98.pdf"><font size="-1">PDF</font></a> (71KB).</p>
 		</blockquote>
 		<p>Rebuilding lcc 4.1 to include ASDL support on UNIX platforms involves the following steps.</p>
 		<ol>
 			<li>Install and test lcc 4.1; see <cite><a href="http://www.cs.princeton.edu/software/lcc/4.1/doc/install.html">Installing lcc</a></cite>.
-			<li>Install <a href="http://www.cs.princeton.edu/zephyr/ASDL/">ASDL version 1.2</a>. Make sure you set the environement variable <code>ASDL_HOME</code> to the root of your ASDL installation directory.
+			<li>Install <a href="http://www.cs.virginia.edu/zephyr/asdl.html">ASDL version 1.2</a>. Make sure you set the environement variable <code>ASDL_HOME</code> to the root of your ASDL installation directory.
 			<li>Add the line shown on bold type below to <code>src/inits.c</code>:
 				<blockquote>
 					<pre>void init(int argc, char *argv[]) {
