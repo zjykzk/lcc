@@ -1,6 +1,6 @@
 #!/usr/local/bin/python
 
-# $Id: ls.cgi 604 2005-02-26 04:57:52Z drh $
+# $Id$
 
 import sys
 import os
