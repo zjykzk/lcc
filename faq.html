@@ -12,7 +12,11 @@
 	<body>
 		<p><span class="banner"><a href="http://www.cs.princeton.edu">Princeton CS</a> &raquo; <a href="http://www.cs.princeton.edu/software">Software</a> &raquo; <a href="http://www.cs.princeton.edu/software/lcc/">lcc, A Retargetable C Compiler</a> &raquo; Frequently Asked Questions</span></p>
 		<h1>Frequently Asked Questions about lcc</h1>
-		<p>Q. <a name="cvs"></a>Is the lcc source tree available via anonymous CVS?<br>A. Yes; the lcc 4.1 source code was stripped out of the lcc book files and checked into a CVS repository. Modifications since then have been made via CVS. The repository is hosted at cvs.cs.princeton.edu. The command</p>
+		<p>Q. <a name="svn"></a>Is the lcc source tree available in a <a href="http://subversion.tigris.org">Subversion</a> repository?<br>A. Yes; the CVS repository mentioned below has been migrated to Subversion and is now the &lsquo;official&rsquo; lcc repository. This repository is hosted at drh.svnrepository.com. The command</p>
+		<blockquote>
+			<code>svn co http://drh.svnrepository.com/svn/lcc/trunk lcc</code></blockquote>
+		<p>creates the directory <code>lcc</code> and populates it with the latest revision from the source tree. You can also <a href="http://subversion.webhop.org/lcc">browse</a> the complete repository tree.</p>
+		<p>Q. <a name="cvs"></a>Is the lcc source tree available via anonymous CVS?<br>A. Yes, but the CVS repository is now frozen in favor of the Subversion repository described above. The CVS repository is hosted at cvs.cs.princeton.edu. The command</p>
 		<blockquote>
 			<code>cvs -d :ext:anon-lcc@cvs.cs.princeton.edu:/cvs co -d lcc .</code></blockquote>
 		<p>creates the directory <code>lcc</code> and populates it from the source tree. This command is equivalent to the commands</p>
@@ -30,7 +34,7 @@
 		<p>Q. Does lcc support the <code>long</code> <a name="long-long"></a><code>long</code> type?<br>
 			A. Yes, lcc 4.1 supports <code>long</code> <code>long</code>, but all of its backends currently use the same representation for <code>long</code> and <code>long</code> <code>long</code>, i.e., 32 bits on 32-bit targets and 64 bits on 64-bit targets.</p>
 		<p>Q. What about licensing lcc or parts of it for commercial use?<br>
-			A. See the <a href="http://www.cs.princeton.edu/software/lcc/pkg/CPYRIGHT">copyright notice</a>. Per-copy and unlimited use licenses are available; for more information, contact</p>
+			A. See the <a href="http://subversion.webhop.org/lcc/trunk/CPYRIGHT">copyright notice</a>. Per-copy and unlimited use licenses are available; for more information, contact</p>
 		<blockquote>
 		  <p>Kim Boedigheimer<br>
 				Addison Wesley<br>
@@ -39,7 +43,7 @@
 		  617/848-6559 <a href="mailto:kim.boedigheimer@pearsoned.com">kim.boedigheimer@pearsoned.com</a></p>
 	</blockquote>
 		<p>Q. How to I report a bug?<br>
-			A. See <a href="http://www.cs.princeton.edu/software/lcc/pkg/doc/install.html#bugs">Section 4 in the installation guide</a>.</p>
+				A. See <a href="http://subversion.webhop.org/lcc/trunk/doc/install.html#bugs"><strong>Reporting Bugs</strong> in the installation guide</a>.</p>
 		<p>Q. Is there a list of typos in the first and second printings of the book?<br>
 			A. Yes; see the errata for the <a href="1.html">first</a> and <a href="2.html">second</a> printings.</p>
 		<p>Q. Has anyone reviewed <cite>A Retargetable C Compiler: Design and Implementation</cite>?<br>
