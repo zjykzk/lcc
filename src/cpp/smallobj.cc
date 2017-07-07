@@ -1,4 +1,5 @@
-#include "smallobj.h"
+// Copyright
+#include "cpp/smallobj.h"
 
 namespace experi {
 
@@ -21,7 +22,8 @@ void* Chunk::Allocate(std::size_t block_size) {
 
     --blocks_available_;
 
-    auto ret = static_cast<unsigned char *>(data_) + first_available_block_ * block_size;
+    auto ret = static_cast<unsigned char *>(data_) +
+        first_available_block_ * block_size;
     first_available_block_ = *ret;
 
     return ret;
@@ -32,8 +34,9 @@ void Chunk::Deallocate(void *p, std::size_t block_size) {
     *d = first_available_block_;
 
     first_available_block_ = static_cast<unsigned char>(
-            static_cast<std::size_t>(d - static_cast<unsigned char *>(data_)) / block_size);
+            static_cast<std::size_t>(d - static_cast<unsigned char *>(data_)) /
+            block_size);
     ++blocks_available_;
 }
 
-} // namespace experi
+}  // namespace experi
