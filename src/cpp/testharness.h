@@ -8,6 +8,9 @@ namespace experi {
 namespace test {
 extern int RunAllTests();
 class Tester {
+ protected:
+     int a;
+
  private:
         bool ok_;
         const char* fname_;
@@ -45,11 +48,11 @@ class Tester {
         }
 
         BINARY_OP(IsEq, ==)
-        BINARY_OP(isNe, !=)
-        BINARY_OP(isGe, >=)
-        BINARY_OP(isGt, >)
-        BINARY_OP(isLe, <=)
-        BINARY_OP(isLt, <)
+        BINARY_OP(IsNe, !=)
+        BINARY_OP(IsGe, >=)
+        BINARY_OP(IsGt, >)
+        BINARY_OP(IsLe, <=)
+        BINARY_OP(IsLt, <)
 #undef BINARY_OP
 
         template <class V>
@@ -61,6 +64,33 @@ class Tester {
             return *this;
         }
 };
+
+#define PREFIX_OBJ(e) ::experi::test::Tester(__FILE__, __LINE__)##e
+#define ASSERT_TRUE(c) PREFIX_OBJ(.Is((c), #c))
+#define ASSERT_EQ(a, b) PREFIX_OBJ(.IsEq((a), (b)))
+#define ASSERT_NE(a, b) PREFIX_OBJ(.IsNe((a), (b)))
+#define ASSERT_GE(a, b) PREFIX_OBJ(.IsGe((a), (b)))
+#define ASSERT_GT(a, b) PREFIX_OBJ(.IsGt((a), (b)))
+#define ASSERT_LE(a, b) PREFIX_OBJ(.IsLe((a), (b)))
+#define ASSERT_LT(a, b) PREFIX_OBJ(.IsLt((a), (b)))
+
+#define TCONCAT(a, b) TCONCAT1(a, b)
+#define TCONCAT1(a, b) a##b
+
+#define TEST(base, name)                                                 \
+    class TCONCAT(_Test_, name): public base {                           \
+     public:                                                             \
+         void _Run();                                                    \
+         static void _RunIt() {                                          \
+             TCONCAT(_Test_, name) t;                                    \
+             t._Run();                                                   \
+         }                                                               \
+    };                                                                   \
+bool TCONCAT(_Test_ignored_, name) =                                     \
+::experi::test::RegisterTest(#b, #name, &TCONCAT(_Test_, name)::_RunIt); \
+void TCONCAT(_Test_, name)::_Run();
+
+extern bool RegisterTest(const char* base, const char* name, void (*func)());
 }  // namespace test
 }  // namespace experi
 
