@@ -34,23 +34,25 @@ void program(void) {
 	int n;
 	
 	level = GLOBAL;
-	for (n = 0; t != EOI; n++)
-		if (kind[t] == CHAR || kind[t] == STATIC
-		|| t == ID || t == '*' || t == '(') {
-			decl(dclglobal);
-			deallocate(STMT);
-			if (!(glevel >= 3 || xref))
-			deallocate(FUNC);
-		} else if (t == ';') {
-			warning("empty declaration\n");
-			t = gettok();
-		} else {
-			error("unrecognized declaration\n");
-			t = gettok();
-		}
+  for (n = 0; t != EOI; n++) {
+    if (kind[t] == CHAR || kind[t] == STATIC
+        || t == ID || t == '*' || t == '(') {
+      decl(dclglobal);
+      deallocate(STMT);
+      if (!(glevel >= 3 || xref))
+        deallocate(FUNC);
+    } else if (t == ';') {
+      warning("empty declaration\n");
+      t = gettok();
+    } else {
+      error("unrecognized declaration\n");
+      t = gettok();
+    }
+  }
 	if (n == 0)
 		warning("empty input file\n");
 }
+
 static Type specifier(int *sclass) {
 	int cls, cons, sign, size, type, vol;
 	Type ty = NULL;

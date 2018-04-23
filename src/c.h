@@ -276,7 +276,7 @@ struct symbol {
 			unsigned vfields:1;
 			Table ftab;		/* omit */
 			Field flist;
-		} s;
+		} s; // struct
 		int value;
 		Symbol *idlist;
 		struct {
