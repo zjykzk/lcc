@@ -311,50 +311,61 @@ Field newfield(char *name, Type ty, Type fty) {
 	return p;
 }
 int eqtype(Type ty1, Type ty2, int ret) {
-	if (ty1 == ty2)
-		return 1;
-	if (ty1->op != ty2->op)
-		return 0;
-	switch (ty1->op) {
-	case ENUM: case UNION: case STRUCT:
-	case UNSIGNED: case INT: case FLOAT:
-		return 0;
-	case POINTER:  return eqtype(ty1->type, ty2->type, 1);
-	case VOLATILE: case CONST+VOLATILE:
-	case CONST:    return eqtype(ty1->type, ty2->type, 1);
-	case ARRAY:    if (eqtype(ty1->type, ty2->type, 1)) {
-		       	if (ty1->size == ty2->size)
-		       		return 1;
-		       	if (ty1->size == 0 || ty2->size == 0)
-		       		return ret;
-		       }
-		       return 0;
-	case FUNCTION: if (eqtype(ty1->type, ty2->type, 1)) {
-		       	Type *p1 = ty1->u.f.proto, *p2 = ty2->u.f.proto;
-		       	if (p1 == p2)
-		       		return 1;
-		       	if (p1 && p2) {
-		       		for ( ; *p1 && *p2; p1++, p2++)
-					if (eqtype(unqual(*p1), unqual(*p2), 1) == 0)
-						return 0;
-				if (*p1 == NULL && *p2 == NULL)
-					return 1;
-		       	} else {
-		       		if (variadic(p1 ? ty1 : ty2))
-					return 0;
-				if (p1 == NULL)
-					p1 = p2;
-				for ( ; *p1; p1++) {
-					Type ty = unqual(*p1);
-					if (promote(ty) != (isenum(ty) ? ty->type : ty))
-						return 0;
-				}
-				return 1;
-		       	}
-		       }
-		       return 0;
-	}
-	assert(0); return 0;
+  if (ty1 == ty2) {
+    return 1;
+  }
+  if (ty1->op != ty2->op) {
+    return 0;
+  }
+  switch (ty1->op) {
+    case ENUM: case UNION: case STRUCT:
+    case UNSIGNED: case INT: case FLOAT:
+      return 0;
+    case POINTER:  return eqtype(ty1->type, ty2->type, 1);
+    case VOLATILE: case CONST+VOLATILE:
+    case CONST:    return eqtype(ty1->type, ty2->type, 1);
+    case ARRAY:    if (eqtype(ty1->type, ty2->type, 1)) {
+                     if (ty1->size == ty2->size) {
+                       return 1;
+                     }
+                     if (ty1->size == 0 || ty2->size == 0) {
+                       return ret;
+                     }
+                   }
+                   return 0;
+    case FUNCTION: if (eqtype(ty1->type, ty2->type, 1)) {
+                     Type *p1 = ty1->u.f.proto, *p2 = ty2->u.f.proto;
+                     if (p1 == p2) {
+                       return 1;
+                     }
+                     if (p1 && p2) {
+                       for ( ; *p1 && *p2; p1++, p2++) {
+                         if (eqtype(unqual(*p1), unqual(*p2), 1) == 0) {
+                           return 0;
+                         }
+                       }
+                       if (*p1 == NULL && *p2 == NULL) {
+                         return 1;
+                       }
+                     } else {
+                       if (variadic(p1 ? ty1 : ty2)) {
+                         return 0;
+                       }
+                       if (p1 == NULL) {
+                         p1 = p2;
+                       }
+                       for ( ; *p1; p1++) {
+                         Type ty = unqual(*p1);
+                         if (promote(ty) != (isenum(ty) ? ty->type : ty)) {
+                           return 0;
+                         }
+                       }
+                       return 1;
+                     }
+                   }
+                   return 0;
+  }
+  assert(0); return 0;
 }
 Type promote(Type ty) {
 	ty = unqual(ty);
