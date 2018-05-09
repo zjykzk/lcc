@@ -40,8 +40,9 @@ void error(const char *fmt, ...) {
 		exit(1);
 	}
 	va_start(ap, fmt);
-	if (firstfile != file && firstfile && *firstfile)
+    if (firstfile != file && firstfile && *firstfile) {
 		fprint(stderr, "%s: ", firstfile);
+    }
 	fprint(stderr, "%w: ", &src);
 	vfprint(stderr, NULL, fmt, ap);
 	va_end(ap);

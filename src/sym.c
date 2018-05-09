@@ -16,10 +16,10 @@ struct table {
 };
 #define HASHSIZE NELEMS(((Table)0)->buckets)
 static struct table
-	cns = { CONSTANTS },
-	ext = { GLOBAL },
-	ids = { GLOBAL },
-	tys = { GLOBAL };
+	cns = { .level = CONSTANTS },
+	ext = { .level = GLOBAL },
+	ids = { .level = GLOBAL },
+	tys = { .level = GLOBAL };
 Table constants   = &cns;
 Table externals   = &ext;
 Table identifiers = &ids;
@@ -47,8 +47,10 @@ Table table(Table tp, int level) {
 }
 void foreach(Table tp, int lev, void (*apply)(Symbol, void *), void *cl) {
 	assert(tp);
-	while (tp && tp->level > lev)
+    while (tp && tp->level > lev) {
 		tp = tp->previous;
+    }
+
 	if (tp && tp->level == lev) {
 		Symbol p;
 		Coordinate sav;
@@ -60,29 +62,35 @@ void foreach(Table tp, int lev, void (*apply)(Symbol, void *), void *cl) {
 		src = sav;
 	}
 }
+
 void enterscope(void) {
-	if (++level == LOCAL)
+    if (++level == LOCAL) {
 		tempid = 0;
+    }
 }
+
 void exitscope(void) {
 	rmtypes(level);
-	if (types->level == level)
+    if (types->level == level) {
 		types = types->previous;
+    }
 	if (identifiers->level == level) {
 		if (Aflag >= 2) {
 			int n = 0;
 			Symbol p;
-			for (p = identifiers->all; p && p->scope == level; p = p->up)
+            for (p = identifiers->all; p && p->scope == level; p = p->up) {
 				if (++n > 127) {
 					warning("more than 127 identifiers declared in a block\n");
 					break;
 				}
+            }
 		}
 		identifiers = identifiers->previous;
 	}
 	assert(level >= GLOBAL);
 	--level;
 }
+
 Symbol install(const char *name, Table *tpp, int level, int arena) {
 	Table tp = *tpp;
 	struct entry *p;
@@ -148,6 +156,8 @@ int genlabel(int n) {
 	label += n;
 	return label - n;
 }
+
+// find or create
 Symbol findlabel(int lab) {
 	struct entry *p;
 	unsigned h = lab&(HASHSIZE-1);
@@ -167,6 +177,7 @@ Symbol findlabel(int lab) {
 	(*IR->defsymbol)(&p->sym);
 	return &p->sym;
 }
+
 Symbol constant(Type ty, Value v) {
 	struct entry *p;
 	unsigned h = v.u&(HASHSIZE-1);
